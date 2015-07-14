@@ -1,0 +1,25 @@
+<html ng-app="helloApp">
+<head>
+	<title>hello world application	</title>
+	<SCRIPT TYPE="text/javascript" src="script/angular.js"></SCRIPT>
+	<SCRIPT TYPE="text/javascript" src="script/main.js"></SCRIPT>
+
+</head>
+<body>
+	<div ng-controller="helloController">
+		<form>
+			User: <input type="text" placeholder="Enter your name" ng-model="userName"></input>
+		</form>
+		<h3>{{userName}}</h3>
+		<div>
+			<ul ng-repeat='project in projects' track by $index>
+				<li>
+					<span>{{project}}</span>
+					<button ng-click='done(project)'>Done</button>
+				</li>				
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>
