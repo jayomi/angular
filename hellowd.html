@@ -1,0 +1,42 @@
+<html ng-app="helloApp">
+<head>
+	<title>hello world</title>
+	<script src="script/angular.js"></script>
+	<script src="script/helloController.js"></script>
+</head>
+<body ng-controller="helloCtrl">
+	<h3>Hello AJS....</h3>
+	<div  >
+
+		<p>Name: <input type="text" ng-model="name"></p>
+		<p>ID: <input type="text" ng-model="id"></p>
+		<p>FullName: <input type="text" ng-model="fname"></p>		
+		<p>Age: <input type="text" ng-model="age"></p>
+		<p>DOB: <input type="text" ng-model="bday"></p>
+		<p>Address: <input type="text" ng-model="address"></p>
+		<p>Salary: <input type="text" ng-model="salary"></p>
+		<p><input type="text" ng-model="test"></p>
+		
+		
+		<h1>{{welcome}}</h1>
+		<h3>{{name|lowercase}}{{ " " + id}}</h3>
+		<div>
+			{{printInfo()}}
+		</div>
+
+		<!-- using filters -->
+		<p>The address is {{address | uppercase}}</p>	
+
+
+		<ul>
+			<li ng-repeat="x in names |orderBy:'name' | filter:test">
+				{{x.name + '\t'+ x.country}}
+			</li>
+		</ul>
+	</div>
+
+	
+
+	
+</body>
+</html>

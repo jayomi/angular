@@ -1,0 +1,35 @@
+<html ng-app="testDirective">
+<head>
+	<title></title>
+	<SCRIPT TYPE="text/javascript" src="script/angular.js"></SCRIPT>
+	<script type="text/javascript" src="script/directiveCtrl.js"></script>
+</head>
+<body ng-controller="testDirective">
+	{{hi}}
+
+	<button ng-disable="myswitch">Click me</button>
+	<p><input type="checkbox" ng-model="myswitch"/>Button</p>
+	<button disabled>save</button>
+
+	<!-- ng-show -->
+	<p ng-show="true">I was here</p>
+	<p ng-show="false">I am going to Kandy...</p>
+	<p ng-show="hour>10">I am visible</p>
+	<!-- ng-hide -->
+	<p ng-hide="false">My current city is Nugegoda</p>
+	<p ng-hide="true">07124546</p>
+
+	<!-- ng-click -->
+	<button ng-click="count=count+1">More Info</button>
+	<h2>{{count}}</h2>
+
+	<div ng-hide="showdata">
+
+		<button ng-click="toggle1()">ShowInfo</button>
+		<button ng-click="toggle2()">HideInfo</button>
+		<p ng-hide="para">It's pretty clear that conditions are not conducive for scoring runs. I don't know what Mark Waugh was thinking when he did his earlier pitch report. Any total over 200 will be tough to chase down here today! </p>
+	</div>
+	
+
+</body>
+</html>

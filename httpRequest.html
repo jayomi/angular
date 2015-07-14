@@ -1,0 +1,31 @@
+<html ng-app="httpRequest">
+<head>
+	<title>http request</title>
+	<link src="css/style.css"></link>
+	<SCRIPT src="script/angular.js"></SCRIPT>
+	<SCRIPT src="script/AjsHttpRequest.js"></SCRIPT>
+	
+
+
+</head>
+<body ng-controller="httpController">
+	{{hi}}
+	<div>
+		<ul>
+			<li ng-repeat="x in names">
+				{{x.Name+" "+x.Country}}
+			</li>
+		</ul>	
+	</div>
+
+	<div>
+		<table id="table1" class="t1">
+			<tr ng-repeat="x in names">
+				<td>{{x.Name}}</td>
+				<td>{{x.Country}}</td>
+			</tr>
+		</table>
+	</div>
+	
+</body>
+</html>
